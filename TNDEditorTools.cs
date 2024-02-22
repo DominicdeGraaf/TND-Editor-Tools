@@ -44,7 +44,7 @@ public class TNDEditorTools : EditorWindow
 
         for(int i = 0; i < guids.Length; i++) {
             string assetPath = AssetDatabase.GUIDToAssetPath(guids[i]);
-            Material _mat = AssetDatabase.LoadAssetAtPath(assetPath, typeof(Material)) as Material;
+            Material _mat = AssetDatabase.LoadAssetAtPath(assetPath, typeof(Material)) as Material; 
             if(_mat.shader.name.Contains("Hidden/InternalErrorShader")) {
                 _mat.shader = _newShader;
             }
